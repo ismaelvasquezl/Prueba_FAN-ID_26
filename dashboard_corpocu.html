@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coquimbo Unido — Inteligencia de Base de Socios</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --amarillo:#FFCE00; --amarillo-2:#FFD833; --negro:#111111; --negro-2:#1c1c1c;
+  --gris:#2a2a2a; --gris-2:#3a3a3a; --texto:#f5f5f5; --texto-2:#b8b8b8;
+  --ok:#37c26a; --warn:#ff9f1c; --bad:#ff4d4d; --linea:#333;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;background:var(--negro);color:var(--texto);line-height:1.5}
+a{color:var(--amarillo)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* HEADER */
+header{background:linear-gradient(135deg,#000 0%,#1a1a1a 100%);border-bottom:4px solid var(--amarillo);position:relative;overflow:hidden}
+header .wrap{padding:34px 20px 30px;position:relative;z-index:2}
+.flag{position:absolute;right:-30px;top:-20px;font-size:220px;opacity:.06;z-index:1;transform:rotate(-8deg)}
+.badge{display:inline-block;background:var(--amarillo);color:#000;font-weight:800;font-size:12px;letter-spacing:2px;padding:5px 12px;border-radius:3px;text-transform:uppercase}
+h1{font-size:34px;font-weight:800;margin:12px 0 4px;letter-spacing:-.5px}
+h1 span{color:var(--amarillo)}
+.sub{color:var(--texto-2);font-size:15px;max-width:720px}
+.pill{display:inline-block;background:var(--gris);border:1px solid var(--linea);color:var(--texto-2);font-size:12px;padding:4px 10px;border-radius:20px;margin:10px 6px 0 0}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 20px}
+nav a{color:var(--texto-2);text-decoration:none;font-size:13px;font-weight:600;padding:7px 12px;border-radius:6px;white-space:nowrap}
+nav a:hover{background:var(--gris);color:var(--amarillo)}
+/* SECTIONS */
+section{padding:40px 0;border-bottom:1px solid var(--linea)}
+.eyebrow{color:var(--amarillo);font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:25px;font-weight:800;margin:6px 0 6px}
+.lead{color:var(--texto-2);max-width:820px;margin-bottom:22px;font-size:15px}
+.simple{background:var(--negro-2);border-left:3px solid var(--amarillo);padding:12px 16px;border-radius:6px;margin:16px 0;font-size:14px;color:#e8e8e8}
+.simple b{color:var(--amarillo)}
+/* KPI GRID */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px}
+.kpi{background:linear-gradient(160deg,var(--negro-2),var(--gris));border:1px solid var(--linea);border-radius:12px;padding:18px;position:relative}
+.kpi .n{font-size:32px;font-weight:800;color:var(--amarillo);line-height:1}
+.kpi .l{font-size:12.5px;color:var(--texto-2);margin-top:6px}
+.kpi .t{font-size:11px;margin-top:8px;font-weight:700}
+.up{color:var(--ok)} .mid{color:var(--warn)} .dn{color:var(--bad)}
+/* CARDS */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--negro-2);border:1px solid var(--linea);border-radius:12px;padding:20px}
+.card h3{font-size:15px;margin-bottom:4px}
+.card .cap{color:var(--texto-2);font-size:12.5px;margin-bottom:14px}
+.chartbox{position:relative;height:260px}
+.chartbox.tall{height:320px}
+#mapa{height:420px;border-radius:12px;border:1px solid var(--linea)}
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--linea)}
+th{color:var(--amarillo);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+tr:hover td{background:#181818}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px}
+.t-ok{background:rgba(55,194,106,.15);color:var(--ok)}
+.t-mid{background:rgba(255,159,28,.15);color:var(--warn)}
+.t-bad{background:rgba(255,77,77,.15);color:var(--bad)}
+.t-y{background:rgba(255,206,0,.15);color:var(--amarillo)}
+/* SEG CARDS */
+.seg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.segc{border-radius:12px;padding:16px;border:1px solid var(--linea);background:var(--negro-2)}
+.segc .big{font-size:28px;font-weight:800;color:var(--amarillo)}
+.segc .nm{font-weight:700;font-size:14px;margin:4px 0}
+.segc .ds{font-size:12.5px;color:var(--texto-2)}
+.segc .bar{height:6px;border-radius:3px;background:var(--gris);margin-top:10px;overflow:hidden}
+.segc .bar i{display:block;height:100%;background:var(--amarillo)}
+/* STRATEGY */
+.estr{background:var(--negro-2);border:1px solid var(--linea);border-radius:12px;padding:20px;margin-bottom:16px;border-top:3px solid var(--amarillo)}
+.estr .top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.estr h3{font-size:17px;color:var(--amarillo)}
+.estr .meta{display:flex;gap:8px;flex-wrap:wrap}
+.estr dl{display:grid;grid-template-columns:130px 1fr;gap:6px 14px;margin-top:12px;font-size:13.5px}
+.estr dt{color:var(--texto-2);font-weight:600}
+.warnbox{background:rgba(255,159,28,.08);border:1px solid var(--warn);border-radius:10px;padding:16px;font-size:14px}
+.warnbox b{color:var(--warn)}
+.foot{padding:30px 0 60px;color:var(--texto-2);font-size:13px;text-align:center}
+@media(max-width:820px){.grid2,.grid3{grid-template-columns:1fr}.estr dl{grid-template-columns:1fr}h1{font-size:26px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="flag">&#9760;</div>
+  <div class="wrap">
+    <span class="badge">&#9760; Coquimbo Unido &middot; Los Piratas</span>
+    <h1>Inteligencia de <span>Base de Socios</span></h1>
+    <p class="sub">Diagnóstico, limpieza, segmentación y activación de la base de captación de la Corporación. Caso piloto del modelo escalable a 30 clubes y 20 gimnasios. Todo explicado para que <b style="color:#fff">todos lo entiendan</b>.</p>
+    <div>
+      <span class="pill">Fuente: BD_CAPTA_CORPOCU.xlsx</span>
+      <span class="pill">325 registros</span>
+      <span class="pill">Hoja: BD_CORPO</span>
+      <span class="pill">Actualizado: jul-2026</span>
+    </div>
+  </div>
+</header>
+<nav><div class="wrap">
+  <a href="#resumen">Resumen</a>
+  <a href="#calidad">Calidad</a>
+  <a href="#territorio">Territorio</a>
+  <a href="#perfil">Perfil</a>
+  <a href="#edad">Edad estimada</a>
+  <a href="#segmentos">Segmentos</a>
+  <a href="#scoring">Scoring</a>
+  <a href="#estrategias">Estrategias</a>
+  <a href="#prediccion">¿Predice?</a>
+  <a href="#diccionario">Diccionario</a>
+  <a href="#metodo">Método</a>
+  <a href="#integracion">Integración</a>
+</div></nav>
+
+<!-- ============ RESUMEN EJECUTIVO ============ -->
+<section id="resumen"><div class="wrap">
+  <div class="eyebrow">01 &middot; Resumen ejecutivo</div>
+  <h2>Qué encontramos en una frase</h2>
+  <p class="lead">Coquimbo Unido tiene una base <b style="color:#fff">pequeña pero muy limpia y profundamente local</b>: casi todos son de Coquimbo, casi todos tienen teléfono y correo válidos, y el RUN valida en el 97%. El trabajo real no es "arreglar datos malos" — es <b style="color:#fff">depurar duplicados, enriquecer y activar</b> a una comunidad que ya está lista para ser contactada.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="n">325</div><div class="l">Registros totales</div><div class="t mid">278 únicos reales</div></div>
+    <div class="kpi"><div class="n">94.5%</div><div class="l">Son de Coquimbo</div><div class="t up">Base hiperlocal</div></div>
+    <div class="kpi"><div class="n">96%</div><div class="l">Móvil válido (312)</div><div class="t up">Contactables por WhatsApp</div></div>
+    <div class="kpi"><div class="n">100%</div><div class="l">Email válido (325)</div><div class="t up">Canal directo listo</div></div>
+    <div class="kpi"><div class="n">97%</div><div class="l">RUN válido (315)</div><div class="t up">Identidad confiable</div></div>
+    <div class="kpi"><div class="n">47</div><div class="l">Duplicados a depurar</div><div class="t dn">14% de la base</div></div>
+  </div>
+  <div class="simple">
+    <b>Las 3 decisiones que habilita este análisis:</b><br>
+    1. <b>Depurar ya</b> los 47 registros duplicados (por correo, móvil o RUN) para no gastar esfuerzo dos veces sobre la misma persona.<br>
+    2. <b>Activar la comunidad núcleo</b>: 244 socios en Coquimbo, contactables y verificados — lista lista para campaña de socios.<br>
+    3. <b>Rescatar 10 registros incompletos</b> con un solo mensaje pidiendo el dato faltante, en vez de descartarlos.
+  </div>
+</div></section>
+
+<!-- ============ CALIDAD ============ -->
+<section id="calidad"><div class="wrap">
+  <div class="eyebrow">02 &middot; Diagnóstico de calidad</div>
+  <h2>¿Podemos confiar en estos datos?</h2>
+  <p class="lead">Antes de analizar nada, revisamos si la base sirve. Estos son los problemas reales que detectamos y cómo los resolvió el pipeline de limpieza.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Completitud de campos clave</h3>
+      <div class="cap">Qué tan llenos vienen los datos que importan</div>
+      <div class="chartbox"><canvas id="cCalidad"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Duplicados detectados</h3>
+      <div class="cap">La misma persona repetida por distintos campos</div>
+      <div class="chartbox"><canvas id="cDup"></canvas></div>
+    </div>
+  </div>
+  <div class="grid3" style="margin-top:16px">
+    <div class="card"><h3 style="color:var(--bad)">Problema 1 &middot; Edad vacía</h3><p class="cap" style="margin:0">La columna "Edad" viene <b>vacía en el 100%</b> de los 325 registros. No sirve como dato base. La reemplazamos por una <b>estimación honesta</b> desde el RUN (ver sección Edad).</p></div>
+    <div class="card"><h3 style="color:var(--warn)">Problema 2 &middot; Teléfonos dañados</h3><p class="cap" style="margin:0">Excel convirtió móviles a notación científica (5.69e+10). El script los <b>reconstruye</b> al formato chileno <b>+569XXXXXXXX</b>. Resultado: 312 móviles válidos.</p></div>
+    <div class="card"><h3 style="color:var(--warn)">Problema 3 &middot; Ciudad con typos</h3><p class="cap" style="margin:0">"COQUIMBI", "COQUIMNO" y variantes son <b>errores de tipeo de Coquimbo</b>. Se normalizaron para no fragmentar el mapa territorial.</p></div>
+  </div>
+  <div class="simple"><b>Veredicto:</b> la base es <b>apta para análisis y activación</b>. Calidad alta en 260 registros, 47 requieren validación (duplicados) y solo 10 son de baja calidad. Completitud promedio: <b>99,9%</b>.</div>
+</div></section>
+<!-- ============ TERRITORIO ============ -->
+<section id="territorio"><div class="wrap">
+  <div class="eyebrow">03 &middot; Georreferenciación</div>
+  <h2>¿Dónde vive la hinchada registrada?</h2>
+  <p class="lead">El 94,5% de la base vive en Coquimbo. El mapa muestra la <b>concentración por sector</b> (tamaño del círculo = cantidad de socios). Esto revela dónde hacer activaciones territoriales de bajo costo y alto impacto.</p>
+  <div class="grid2">
+    <div class="card" style="padding:0;overflow:hidden"><div id="mapa"></div></div>
+    <div class="card">
+      <h3>Sectores de Coquimbo con más socios</h3>
+      <div class="cap">Detectado desde la dirección declarada (320/325 con calle y número)</div>
+      <div class="chartbox tall"><canvas id="cSector"></canvas></div>
+    </div>
+  </div>
+  <div class="simple"><b>Cómo leerlo:</b> <b>Sindempart (34)</b>, <b>Parte Alta (15)</b> y <b>Peñuelas (11)</b> concentran la mayor densidad. Son los sectores ideales para banderazos, puntos de captación de socios y activaciones barriales. El mapa usa coordenadas aproximadas de sector; el script Python geocodifica la dirección exacta al ejecutarse (<code>--geo</code>).</div>
+</div></section>
+
+<!-- ============ PERFIL ============ -->
+<section id="perfil"><div class="wrap">
+  <div class="eyebrow">04 &middot; Análisis descriptivo</div>
+  <h2>¿Quiénes son?</h2>
+  <p class="lead">Profesión y oficio declarados. Ayuda a decidir el tono de las campañas y qué beneficios de socio ofrecer.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Profesiones y oficios más frecuentes</h3>
+      <div class="cap">Top 12 declarados</div>
+      <div class="chartbox tall"><canvas id="cProf"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Lectura para marketing</h3>
+      <div class="cap">Qué nos dice el perfil</div>
+      <p style="font-size:14px;color:#e8e8e8">La base está dominada por <b style="color:var(--amarillo)">dueñas de casa (29)</b> y <b style="color:var(--amarillo)">estudiantes (16)</b>, seguidas de oficios y profesiones variadas (dependientes, profesores, independientes, TENS, mecánicos).</p>
+      <p style="font-size:14px;color:#e8e8e8;margin-top:10px">Implica una comunidad <b>familiar y popular</b>, no un público de alto ticket. Los beneficios de socio deben ser <b>accesibles</b> (cuotas bajas, ya definidas en $1.000), con foco en <b>pertenencia e identidad pirata</b> más que en lujo.</p>
+      <div class="simple" style="margin-bottom:0"><b>Decisión:</b> campañas emocionales y territoriales &gt; campañas premium. El valor es el sentido de pertenencia.</div>
+    </div>
+  </div>
+</div></section>
+<!-- ============ EDAD ESTIMADA ============ -->
+<section id="edad"><div class="wrap">
+  <div class="eyebrow">05 &middot; Edad estimada desde RUN</div>
+  <h2>Una estimación honesta, no un invento</h2>
+  <div class="warnbox" style="margin-bottom:20px">
+    <b>&#9888; Advertencia metodológica (importante).</b> El RUN chileno se entrega de forma correlativa: a mayor número, más reciente la inscripción. Existe una correlación <b>estadística</b> entre el número de RUN y el año de nacimiento, pero <b>NO permite conocer la edad exacta</b> (hay inscripciones tardías, extranjeros nacionalizados y variación natural). Por eso <b>no mostramos una edad exacta</b>: mostramos un <b>tramo etario aproximado</b> y marcamos el <b>nivel de confianza como bajo</b>. Úsese como orientación de mezcla generacional, nunca como dato individual definitivo.
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h3>Tramo etario estimado</h3>
+      <div class="cap">Aproximación referencial desde el RUN — confianza baja</div>
+      <div class="chartbox"><canvas id="cEdad"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Qué se puede concluir (con prudencia)</h3>
+      <div class="cap">Solo a nivel de grupo, no de persona</div>
+      <p style="font-size:14px;color:#e8e8e8">La mezcla sugiere un núcleo <b style="color:var(--amarillo)">adulto-joven y adulto (26 a 54 años)</b>, que concentra ~82% de la base estimada. Coherente con socios que sostienen económicamente el club.</p>
+      <p style="font-size:14px;color:#e8e8e8;margin-top:10px">Hay poca presencia estimada de menores de 25, lo que abre una <b>oportunidad de captación juvenil</b> (universitarios, hinchada joven).</p>
+      <div class="simple" style="margin-bottom:0"><b>Alternativa recomendada:</b> para segmentar por edad de verdad, agregar una pregunta de <b>fecha de nacimiento</b> en el próximo formulario. Es el único método robusto.</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ SEGMENTOS ============ -->
+<section id="segmentos"><div class="wrap">
+  <div class="eyebrow">06 &middot; Segmentación accionable</div>
+  <h2>Seis grupos, seis acciones</h2>
+  <p class="lead">Cada registro fue clasificado en un segmento que dice <b>qué hacer con él</b>. No es teoría: es una lista de trabajo.</p>
+  <div class="seg" id="segCards"></div>
+</div></section>
+
+<!-- ============ SCORING ============ -->
+<section id="scoring"><div class="wrap">
+  <div class="eyebrow">07 &middot; Scoring semipredictivo</div>
+  <h2>Un puntaje de prioridad, transparente</h2>
+  <p class="lead">Como la base <b>no tiene historial de comportamiento</b> (nadie tiene registro de asistencia, compra o renovación), no se puede entrenar un modelo predictivo honesto. En su lugar construimos un <b>score de priorización 0–100</b> con reglas claras que cualquiera puede auditar.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>Cómo se compone el score</h3>
+      <div class="cap">Suma de 5 factores = 100 puntos</div>
+      <div class="chartbox"><canvas id="cPesos"></canvas></div>
+    </div>
+    <div class="card">
+      <h3>Resultado sobre la base real</h3>
+      <div class="cap">Distribución de puntajes</div>
+      <table>
+        <tr><th>Indicador</th><th>Valor</th></tr>
+        <tr><td>Score promedio</td><td><b style="color:var(--amarillo)">96,4</b></td></tr>
+        <tr><td>Score mediana</td><td>100,0</td></tr>
+        <tr><td>Mínimo / Máximo</td><td>65 / 100</td></tr>
+        <tr><td>Contactabilidad (móvil+email)</td><td>35 pts</td></tr>
+        <tr><td>Identidad (RUN válido)</td><td>20 pts</td></tr>
+        <tr><td>Territorio (cercanía a Coquimbo)</td><td>20 pts</td></tr>
+        <tr><td>Completitud del registro</td><td>15 pts</td></tr>
+        <tr><td>Unicidad (no duplicado)</td><td>10 pts</td></tr>
+      </table>
+      <div class="simple" style="margin-bottom:0"><b>Traducción:</b> el score alto confirma que la base es fuerte. Sirve para <b>ordenar la fila</b> de contacto, priorizando a quién llamar primero.</div>
+    </div>
+  </div>
+</div></section>
+<!-- ============ ESTRATEGIAS ============ -->
+<section id="estrategias"><div class="wrap">
+  <div class="eyebrow">08 &middot; Marketing deportivo</div>
+  <h2>Del dato a la cancha</h2>
+  <p class="lead">Siete acciones tropicalizadas a Coquimbo, la identidad pirata y el fútbol chileno — inspiradas en modelos de Alemania, España, Argentina, Brasil y EE.UU., pero pensadas para esta base real.</p>
+
+  <div class="estr">
+    <div class="top"><h3>&#9760; 1. "Mapa Pirata" — Banderazos por sector</h3>
+      <div class="meta"><span class="tag t-ok">Prioridad alta</span><span class="tag t-y">Dificultad baja</span></div></div>
+    <dl>
+      <dt>Objetivo</dt><dd>Convertir la concentración territorial en presencia de marca y captación de socios.</dd>
+      <dt>Segmento</dt><dd>Alto potencial territorial + alta prioridad (núcleo Coquimbo).</dd>
+      <dt>Lógica de datos</dt><dd>Sindempart (34), Parte Alta (15) y Peñuelas (11) concentran la hinchada registrada. Ir donde ya están.</dd>
+      <dt>Implementación</dt><dd>Calendario de banderazos y "toma pirata" barrio por barrio con punto de inscripción de socios in situ (QR al formulario). Inspiración: culturas de barra de Argentina/Brasil.</dd>
+      <dt>Impacto esperado</dt><dd>+ inscripciones locales, viralización en redes, sentido de territorio.</dd>
+    </dl>
+  </div>
+
+  <div class="estr">
+    <div class="top"><h3>&#128241; 2. "WhatsApp del Tesoro" — CRM conversacional</h3>
+      <div class="meta"><span class="tag t-ok">Prioridad alta</span><span class="tag t-y">Dificultad baja</span></div></div>
+    <dl>
+      <dt>Objetivo</dt><dd>Activar el canal directo que ya existe: 312 móviles válidos.</dd>
+      <dt>Segmento</dt><dd>Alta prioridad de contacto (244).</dd>
+      <dt>Lógica de datos</dt><dd>96% de móviles válidos y 100% de emails. El canal está listo; solo falta usarlo ordenadamente.</dd>
+      <dt>Implementación</dt><dd>Lista de difusión / bot de WhatsApp con recordatorios de partido, cuotas y beneficios. Empezar por score más alto.</dd>
+      <dt>Impacto esperado</dt><dd>Mayor renovación de cuota ($1.000) y asistencia; dato de comportamiento que hoy NO existe.</dd>
+    </dl>
+  </div>
+
+  <div class="estr">
+    <div class="top"><h3>&#129689; 3. "Carnet Pirata" — Programa de socios por niveles</h3>
+      <div class="meta"><span class="tag t-mid">Prioridad media</span><span class="tag t-mid">Dificultad media</span></div></div>
+    <dl>
+      <dt>Objetivo</dt><dd>Formalizar la membresía y crear ingresos recurrentes.</dd>
+      <dt>Segmento</dt><dd>Toda la base depurada (278 únicos).</dd>
+      <dt>Lógica de datos</dt><dd>Perfil familiar y popular (dueñas de casa, estudiantes): beneficios accesibles, no premium.</dd>
+      <dt>Implementación</dt><dd>Membresía digital con beneficios locales (comercios de Coquimbo aliados), inspirada en el modelo alemán de socios (Mitglieder) adaptado a bajo ticket.</dd>
+      <dt>Impacto esperado</dt><dd>Base de socios formal, medible y creciente.</dd>
+    </dl>
+  </div>
+
+  <div class="estr">
+    <div class="top"><h3>&#127891; 4. "Cantera de Hinchas" — Captación juvenil</h3>
+      <div class="meta"><span class="tag t-mid">Prioridad media</span><span class="tag t-mid">Dificultad media</span></div></div>
+    <dl>
+      <dt>Objetivo</dt><dd>Cubrir el vacío generacional: hoy hay poca presencia estimada de &lt;25 años.</dd>
+      <dt>Segmento</dt><dd>Nuevo — estudiantes y jóvenes de Coquimbo.</dd>
+      <dt>Lógica de datos</dt><dd>Tramo etario estimado muestra núcleo 26–54; los jóvenes están subrepresentados.</dd>
+      <dt>Implementación</dt><dd>Alianzas con colegios/universidades, entradas jóvenes, contenido TikTok/Instagram con la estética pirata. Inspiración: fan engagement digital de EE.UU./España.</dd>
+      <dt>Impacto esperado</dt><dd>Renovación generacional de la hinchada y crecimiento de la base.</dd>
+    </dl>
+  </div>
+
+  <div class="estr">
+    <div class="top"><h3>&#129529; 5. "Botín Limpio" — Depuración y consentimiento</h3>
+      <div class="meta"><span class="tag t-ok">Prioridad alta</span><span class="tag t-y">Dificultad baja</span></div></div>
+    <dl>
+      <dt>Objetivo</dt><dd>Base confiable y con permiso legal para comunicar.</dd>
+      <dt>Segmento</dt><dd>Requiere validación (47 duplicados) + incompletos recuperables (10).</dd>
+      <dt>Lógica de datos</dt><dd>42 correos, 23 móviles y 8 RUN repetidos; solo 8 tienen consentimiento explícito guardado.</dd>
+      <dt>Implementación</dt><dd>Campaña de "confirma tus datos" por WhatsApp/email que fusiona duplicados y captura consentimiento (clave para Ley 19.628 de datos personales en Chile).</dd>
+      <dt>Impacto esperado</dt><dd>Menor costo de contacto, cero mensajes repetidos, cumplimiento legal.</dd>
+    </dl>
+  </div>
+
+  <div class="estr">
+    <div class="top"><h3>&#127942; 6. "Data Pirata" — Historial de comportamiento</h3>
+      <div class="meta"><span class="tag t-mid">Prioridad media</span><span class="tag t-mid">Dificultad media</span></div></div>
+    <dl>
+      <dt>Objetivo</dt><dd>Construir el dato que hoy falta para predecir de verdad.</dd>
+      <dt>Segmento</dt><dd>Toda la base activa.</dd>
+      <dt>Lógica de datos</dt><dd>Sin historial (asistencia, compras, renovación) no hay predicción posible. Hay que empezar a registrarlo.</dd>
+      <dt>Implementación</dt><dd>Registrar cada interacción (entrada escaneada, compra, apertura de mensaje). En 1–2 temporadas habilita un modelo predictivo real de churn/renovación.</dd>
+      <dt>Impacto esperado</dt><dd>Del scoring de reglas al modelo predictivo genuino.</dd>
+    </dl>
+  </div>
+
+  <div class="estr">
+    <div class="top"><h3>&#128176; 7. "Tesoro Compartido" — Comercio local aliado</h3>
+      <div class="meta"><span class="tag t-mid">Prioridad media</span><span class="tag t-bad">Dificultad alta</span></div></div>
+    <dl>
+      <dt>Objetivo</dt><dd>Monetizar la pertenencia sin subir el ticket al hincha.</dd>
+      <dt>Segmento</dt><dd>Socios activos + comercios de Coquimbo.</dd>
+      <dt>Lógica de datos</dt><dd>Concentración territorial altísima: el carnet pirata tiene poder de negociación con comercios de barrio.</dd>
+      <dt>Implementación</dt><dd>Red de descuentos "muestra tu carnet pirata" con comercios de Sindempart, Parte Alta, Centro. Inspiración: modelos de club-comunidad de Brasil/España.</dd>
+      <dt>Impacto esperado</dt><dd>Ingreso por auspicios, valor tangible del carnet, fidelización.</dd>
+    </dl>
+  </div>
+</div></section>
+<!-- ============ PREDICCION ============ -->
+<section id="prediccion"><div class="wrap">
+  <div class="eyebrow">09 &middot; Evaluación predictiva</div>
+  <h2>¿Esta base permite predecir? Respuesta honesta: todavía no</h2>
+  <div class="grid3">
+    <div class="card"><h3 style="color:var(--bad)">¿Predicción robusta?</h3><p class="cap" style="margin:0"><b>No.</b> Falta lo esencial: no hay una variable objetivo (ej. "renovó / no renovó") ni historial de comportamiento.</p></div>
+    <div class="card"><h3 style="color:var(--bad)">¿Variable objetivo?</h3><p class="cap" style="margin:0"><b>No existe.</b> La base es declarativa (datos de contacto de un formulario), no transaccional.</p></div>
+    <div class="card"><h3 style="color:var(--warn)">¿Qué sí se puede?</h3><p class="cap" style="margin:0">Un <b>scoring semipredictivo por reglas</b> (sección 07) para priorizar contacto. Es lo correcto y transparente.</p></div>
+  </div>
+  <div class="simple"><b>El camino a un modelo real:</b> ejecutar la estrategia "Data Pirata" (registrar asistencia, compras y renovaciones). Con 1–2 temporadas de historial se puede entrenar un modelo de <b>churn</b> (quién dejará de ser socio) y de <b>propensión</b> (quién comprará). No forzamos hoy un modelo que la base no soporta.</div>
+</div></section>
+
+<!-- ============ DICCIONARIO ============ -->
+<section id="diccionario"><div class="wrap">
+  <div class="eyebrow">10 &middot; Diccionario de datos</div>
+  <h2>Cada campo, explicado</h2>
+  <p class="lead">Nombres técnicos limpios y reutilizables para escalar el modelo a los otros clubes y gimnasios.</p>
+  <div class="card" style="overflow-x:auto">
+    <table id="tDicc"><thead><tr><th>Campo</th><th>Tipo</th><th>Descripción</th><th>Origen</th></tr></thead><tbody></tbody></table>
+  </div>
+</div></section>
+
+<!-- ============ METODOLOGIA ============ -->
+<section id="metodo"><div class="wrap">
+  <div class="eyebrow">11 &middot; Metodología</div>
+  <h2>Cómo se hizo, paso a paso</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Flujo del pipeline (Python)</h3>
+      <ol style="font-size:14px;color:#e8e8e8;padding-left:18px;line-height:1.9">
+        <li>Lectura de la hoja <code>BD_CORPO</code> (325 × 12).</li>
+        <li>Renombrado a nombres técnicos por posición.</li>
+        <li>Reparación de teléfonos (notación científica &rarr; +569).</li>
+        <li>Limpieza de RUN + validación de dígito verificador (módulo 11).</li>
+        <li>Normalización de emails (minúsculas, sin espacios).</li>
+        <li>Normalización de ciudad (corrección de typos).</li>
+        <li>Detección de duplicados (RUN / email / móvil / nombre+ciudad).</li>
+        <li>Estimación de tramo etario desde RUN (con nivel de confianza).</li>
+        <li>Scoring semipredictivo + segmentación.</li>
+        <li>Preparación de geocodificación (geopy/Nominatim).</li>
+        <li>Exportación de CSV limpio + JSON de agregados.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>Decisiones y supuestos clave</h3>
+      <p style="font-size:14px;color:#e8e8e8">&bull; <b>Edad:</b> no se afirma edad exacta desde RUN; solo tramo con confianza baja.</p>
+      <p style="font-size:14px;color:#e8e8e8;margin-top:8px">&bull; <b>Duplicados:</b> se conserva el primero y se marca el resto para validación, no se borra automáticamente.</p>
+      <p style="font-size:14px;color:#e8e8e8;margin-top:8px">&bull; <b>Móviles:</b> 9 dígitos que parten en 9 &rarr; móvil; se rescata notación científica.</p>
+      <p style="font-size:14px;color:#e8e8e8;margin-top:8px">&bull; <b>Consentimiento:</b> "Si/ok/okey" cuentan como aceptación explícita (solo 8 registros).</p>
+      <p style="font-size:14px;color:#e8e8e8;margin-top:8px">&bull; <b>Reproducible:</b> el mismo script corre sobre cualquier club de la red cambiando el archivo fuente.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ INTEGRACION ============ -->
+<section id="integracion"><div class="wrap">
+  <div class="eyebrow">12 &middot; Integración</div>
+  <h2>Cómo poner esto a correr</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Paso a paso</h3>
+      <ol style="font-size:14px;color:#e8e8e8;padding-left:18px;line-height:1.9">
+        <li>Instalar dependencias:<br><code>pip install pandas numpy openpyxl geopy</code></li>
+        <li>Dejar <code>BD_CAPTA_CORPOCU.xlsx</code> junto al script.</li>
+        <li>Correr limpieza: <code>python pipeline_corpocu.py</code></li>
+        <li>Con geocodificación real: <code>python pipeline_corpocu.py --geo</code></li>
+        <li>Revisar carpeta <code>salidas_corpocu/</code>.</li>
+        <li>Abrir <code>dashboard_corpocu.html</code> en el navegador.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>Archivos que genera</h3>
+      <table>
+        <tr><th>Archivo</th><th>Para qué</th></tr>
+        <tr><td><code>bd_corpo_limpia.csv</code></td><td>Base limpia, 1 fila por registro</td></tr>
+        <tr><td><code>diccionario_datos.csv</code></td><td>Diccionario de campos</td></tr>
+        <tr><td><code>resumen_dashboard.json</code></td><td>Agregados para el dashboard</td></tr>
+        <tr><td><code>geo_input.csv</code></td><td>Direcciones para geocodificar</td></tr>
+        <tr><td><code>geo_resultado.csv</code></td><td>Lat/lon (con <code>--geo</code>)</td></tr>
+      </table>
+      <div class="simple" style="margin-bottom:0"><b>Escala:</b> para los otros 30 clubes y 20 gimnasios, se reemplaza el archivo fuente y se mantienen los nombres técnicos. El dashboard se alimenta del JSON.</div>
+    </div>
+  </div>
+</div></section>
+
+<div class="foot wrap">
+  &#9760; Coquimbo Unido &middot; Inteligencia de Base de Socios &middot; Caso piloto del modelo escalable<br>
+  Análisis sobre datos reales de BD_CAPTA_CORPOCU.xlsx (325 registros). Cifras verificadas por el pipeline. Estimaciones de edad de carácter referencial.
+</div>
+<script>
+// ===== DATOS REALES (generados por pipeline_corpocu.py) =====
+const D = {
+  calidad:{movil_valido:312,email_valido:325,run_valido:315,tiene_fijo:32,total:325},
+  dup:{run:8,email:42,movil:23,nombre_ciudad:6,total_marcados:47},
+  sectores:{"Sindempart":34,"Parte Alta":15,"Peñuelas":11,"El Sauce":11,"Tierras Blancas":10,"El Llano":10,"La Herradura":10,"San Juan":9,"La Cantera":5,"Pan de Azúcar":5,"Centro":3,"Sector Alto":3,"Puerto":3},
+  profesiones:{"Dueña de casa":29,"Estudiante":16,"Dependiente":7,"Profesor":7,"Independiente":7,"Secretaria":5,"Abogado":4,"Mecánico":4,"Ingeniero":4,"TENS":4,"Profesora":4,"Jubilada":3},
+  edad:{"26-34":94,"35-44":115,"45-54":60,"55-64":30,"65+":23,"18-25":1},
+  pesos:{"Contactabilidad":35,"Identidad (RUN)":20,"Territorio":20,"Completitud":15,"Unicidad":10},
+  segmentos:[
+    {k:"alta_prioridad_contacto",n:"Alta prioridad de contacto",v:244,d:"Núcleo Coquimbo, contactable y con identidad verificada. Lista de campaña de socios AHORA.",c:"#37c26a"},
+    {k:"requiere_validacion",n:"Requiere validación",v:47,d:"Duplica RUN, email o móvil. Depurar y fusionar antes de contactar.",c:"#ff4d4d"},
+    {k:"contacto_utilizable",n:"Contacto utilizable",v:16,d:"Contactable pero fuera del territorio núcleo (Santiago, Calama...). Campañas digitales.",c:"#FFCE00"},
+    {k:"registro_incompleto_recuperable",n:"Incompleto recuperable",v:10,d:"Falta un dato clave (móvil/completitud). Un mensaje lo recupera.",c:"#ff9f1c"},
+    {k:"alto_potencial_territorial",n:"Alto potencial territorial",v:8,d:"Núcleo Coquimbo, activable, requiere leve enriquecimiento de datos.",c:"#4da6ff"}
+  ],
+  // coordenadas aproximadas por sector (para visualización de concentración)
+  geo:[
+    {s:"Sindempart",lat:-29.9720,lon:-71.3380,v:34},{s:"Parte Alta",lat:-29.9560,lon:-71.3320,v:15},
+    {s:"Peñuelas",lat:-29.9850,lon:-71.2950,v:11},{s:"El Sauce",lat:-29.9800,lon:-71.3350,v:11},
+    {s:"Tierras Blancas",lat:-29.9450,lon:-71.3050,v:10},{s:"El Llano",lat:-29.9600,lon:-71.3200,v:10},
+    {s:"La Herradura",lat:-29.9880,lon:-71.3600,v:10},{s:"San Juan",lat:-29.9350,lon:-71.2750,v:9},
+    {s:"La Cantera",lat:-29.9650,lon:-71.3450,v:5},{s:"Pan de Azúcar",lat:-29.9200,lon:-71.2600,v:5},
+    {s:"Centro / Puerto",lat:-29.9533,lon:-71.3436,v:6},{s:"La Serena",lat:-29.9027,lon:-71.2519,v:3},
+    {s:"Guanaqueros",lat:-30.1900,lon:-71.4400,v:1},{s:"Tongoy",lat:-30.2560,lon:-71.4960,v:1}
+  ],
+  diccionario:[
+    ["nombre","texto","Nombre del socio/postulante","Limpiado"],
+    ["run_limpio","texto","RUN normalizado cuerpo-DV, sin puntos","Derivado"],
+    ["run_valido","bool","TRUE si el dígito verificador es correcto","Derivado"],
+    ["movil_norm","texto","Móvil reparado en formato +569XXXXXXXX","Derivado"],
+    ["movil_valido","bool","TRUE si es un móvil chileno válido","Derivado"],
+    ["email_final","texto","Email normalizado (minúsculas, sin espacios)","Derivado"],
+    ["domicilio","texto","Dirección declarada (limpia)","Limpiado"],
+    ["ciudad_norm","texto","Ciudad normalizada (typos corregidos)","Derivado"],
+    ["profesion_oficio","texto","Profesión u oficio declarado","Limpiado"],
+    ["edad_estimada_aprox","entero","Edad APROXIMADA desde RUN (NO exacta)","Derivado"],
+    ["tramo_etario_estimado","categoría","Tramo etario estimado desde RUN","Derivado"],
+    ["nivel_confianza_edad","categoría","Confianza de la estimación de edad","Derivado"],
+    ["completitud_pct","número","% de campos clave completos","Derivado"],
+    ["nivel_calidad","categoría","alta / media / baja / requiere_validacion","Derivado"],
+    ["es_duplicado","bool","TRUE si duplica RUN, email o móvil previo","Derivado"],
+    ["score","número","Score de priorización 0-100 (semipredictivo)","Derivado"],
+    ["segmento","categoría","Segmento accionable de captación/relación","Derivado"],
+    ["acepta_estatutos_bool","bool","Consentimiento explícito registrado","Derivado"]
+  ]
+};
+
+const AM="#FFCE00", NE="#111", TX="#b8b8b8", GR="#333";
+Chart.defaults.color=TX; Chart.defaults.borderColor=GR; Chart.defaults.font.family="Segoe UI,system-ui,Arial";
+const noleg={plugins:{legend:{display:false}}};
+
+// Calidad (barras horizontales %)
+new Chart(cCalidad,{type:'bar',data:{labels:['Móvil válido','Email válido','RUN válido','Tiene fijo'],
+  datasets:[{data:[312,325,315,32],backgroundColor:[AM,AM,AM,'#666'],borderRadius:6}]},
+  options:{indexAxis:'y',...noleg,scales:{x:{max:325,grid:{color:GR}},y:{grid:{display:false}}}}});
+
+// Duplicados
+new Chart(cDup,{type:'bar',data:{labels:['Por email','Por móvil','Por RUN','Nombre+ciudad'],
+  datasets:[{data:[42,23,8,6],backgroundColor:['#ff4d4d','#ff7043','#ff9f1c','#ffca28'],borderRadius:6}]},
+  options:{...noleg,scales:{y:{grid:{color:GR}},x:{grid:{display:false}}}}});
+
+// Sectores
+new Chart(cSector,{type:'bar',data:{labels:Object.keys(D.sectores),
+  datasets:[{data:Object.values(D.sectores),backgroundColor:AM,borderRadius:5}]},
+  options:{indexAxis:'y',...noleg,scales:{x:{grid:{color:GR}},y:{grid:{display:false}}}}});
+
+// Profesiones
+new Chart(cProf,{type:'bar',data:{labels:Object.keys(D.profesiones),
+  datasets:[{data:Object.values(D.profesiones),backgroundColor:'#FFD833',borderRadius:5}]},
+  options:{indexAxis:'y',...noleg,scales:{x:{grid:{color:GR}},y:{grid:{display:false}}}}});
+
+// Edad (con nota de confianza baja)
+new Chart(cEdad,{type:'bar',data:{labels:Object.keys(D.edad),
+  datasets:[{data:Object.values(D.edad),backgroundColor:'#8a7a1f',borderColor:AM,borderWidth:1,borderRadius:5}]},
+  options:{...noleg,scales:{y:{grid:{color:GR}},x:{grid:{display:false}}},
+  plugins:{legend:{display:false},tooltip:{callbacks:{afterLabel:()=>'Estimación referencial · confianza baja'}}}}});
+
+// Pesos scoring (donut)
+new Chart(cPesos,{type:'doughnut',data:{labels:Object.keys(D.pesos),
+  datasets:[{data:Object.values(D.pesos),backgroundColor:[AM,'#FFD833','#c9a227','#7a6a1a','#4d4310'],borderColor:NE,borderWidth:2}]},
+  options:{plugins:{legend:{position:'bottom',labels:{padding:12,font:{size:12}}}},cutout:'58%'}});
+
+// Segment cards
+const maxSeg=Math.max(...D.segmentos.map(s=>s.v));
+document.getElementById('segCards').innerHTML=D.segmentos.map(s=>`
+  <div class="segc" style="border-top:3px solid ${s.c}">
+    <div class="big" style="color:${s.c}">${s.v}</div>
+    <div class="nm">${s.n}</div>
+    <div class="ds">${s.d}</div>
+    <div class="bar"><i style="width:${Math.round(s.v/maxSeg*100)}%;background:${s.c}"></i></div>
+  </div>`).join('');
+
+// Diccionario
+document.querySelector('#tDicc tbody').innerHTML=D.diccionario.map(r=>`
+  <tr><td><code>${r[0]}</code></td><td><span class="tag ${r[3]=='Derivado'?'t-y':'t-ok'}">${r[1]}</span></td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('');
+
+// Mapa Leaflet
+const map=L.map('mapa',{scrollWheelZoom:false}).setView([-29.97,-71.34],12);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  {attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);
+D.geo.forEach(g=>{
+  L.circleMarker([g.lat,g.lon],{radius:6+g.v*0.8,color:'#000',weight:1,fillColor:AM,fillOpacity:.75})
+   .addTo(map).bindPopup(`<b>${g.s}</b><br>${g.v} socio(s) registrado(s)`);
+});
+</script>
+</body>
+</html>
