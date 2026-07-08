@@ -1,0 +1,85 @@
+{
+  "total_registros": 325,
+  "duplicados": {
+    "por_run": 8,
+    "por_email": 42,
+    "por_movil": 23,
+    "por_nombre_ciudad": 6,
+    "registros_marcados_duplicados": 47,
+    "registros_unicos": 278
+  },
+  "calidad_contacto": {
+    "movil_valido": 312,
+    "movil_invalido": 11,
+    "email_valido": 325,
+    "run_valido": 315,
+    "run_invalido": 10,
+    "tiene_fijo": 32
+  },
+  "nivel_calidad": {
+    "alta": 260,
+    "requiere_validacion": 47,
+    "baja": 10,
+    "media": 8
+  },
+  "completitud_promedio_pct": 99.9,
+  "territorio": {
+    "Coquimbo": 307,
+    "Santiago": 7,
+    "La Serena": 3,
+    "Calama": 2,
+    "Canberra": 1,
+    "Puerto Montt": 1,
+    "Copiapo": 1,
+    "Rancagua": 1,
+    "San Bernardo": 1,
+    "Guanaqueros": 1
+  },
+  "profesiones_top": {
+    "Dueña de casa": 29,
+    "Estudiante": 16,
+    "Dependiente": 7,
+    "Profesor": 7,
+    "Independiente": 7,
+    "Secretaria": 5,
+    "Abogado": 4,
+    "Mecánico": 4,
+    "Ingeniero": 4,
+    "Tens": 4,
+    "Profesora": 4,
+    "Jubilada": 3,
+    "Jubilado": 3,
+    "Administrativo": 3,
+    "Ingeniero Comercial": 3
+  },
+  "tramo_etario_estimado": {
+    "35_44": 115,
+    "26_34": 94,
+    "45_54": 60,
+    "55_64": 30,
+    "65_mas": 23,
+    "fuera_de_rango": 1,
+    "sin_dato": 1,
+    "18_25": 1
+  },
+  "confianza_edad": {
+    "media": 236,
+    "baja": 87,
+    "nula": 2
+  },
+  "segmentos": {
+    "alta_prioridad_contacto": 244,
+    "requiere_validacion": 47,
+    "contacto_utilizable": 16,
+    "registro_incompleto_recuperable": 10,
+    "alto_potencial_territorial": 8
+  },
+  "score": {
+    "promedio": 96.4,
+    "mediana": 100.0,
+    "min": 65.0,
+    "max": 100.0
+  },
+  "edad_vacia": true,
+  "consentimiento_explicito": 8
+}

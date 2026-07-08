@@ -1,0 +1,27 @@
+﻿campo,tipo,descripcion,origen
+marca_temporal,datetime,Fecha/hora de envio del formulario,Original
+email_formulario,texto,Correo con que se completo el formulario (Google),Original
+nombre,texto,Nombre del socio/postulante,Limpiado
+id_run,texto,RUN original tal como fue ingresado,Original
+edad_original,vacio,Columna de edad: VACIA en 100% -> no utilizable,Original
+domicilio,texto,Direccion declarada,Limpiado
+ciudad,texto,Ciudad declarada (con typos),Original
+profesion_oficio,texto,Profesion u oficio declarado,Limpiado
+telefono_fijo,texto,"Telefono fijo (opcional, casi siempre vacio)",Original
+telefono_movil,texto,Telefono movil (obligatorio; danado por Excel),Original
+email_contacto,texto,Correo de contacto (obligatorio),Original
+acepta_estatutos,texto,Consentimiento/compromiso estatutario,Original
+run_limpio,texto,"RUN normalizado cuerpo-DV, sin puntos",Derivado
+run_valido,bool,TRUE si el digito verificador es correcto,Derivado
+movil_norm,texto,Movil reparado en formato +569XXXXXXXX,Derivado
+movil_valido,bool,TRUE si es un movil chileno valido,Derivado
+email_final,texto,"Email normalizado (minusculas, sin espacios)",Derivado
+ciudad_norm,texto,Ciudad normalizada (typos corregidos),Derivado
+edad_estimada_aprox,entero,Edad APROXIMADA estimada desde RUN (NO exacta),Derivado
+tramo_etario_estimado,categoria,Tramo etario estimado desde RUN,Derivado
+nivel_confianza_edad,categoria,Confianza de la estimacion de edad,Derivado
+completitud_pct,numero,% de campos clave completos,Derivado
+nivel_calidad,categoria,alta/media/baja/requiere_validacion,Derivado
+es_duplicado,bool,"TRUE si duplica RUN, email o movil previo",Derivado
+score,numero,Score de priorizacion 0-100 (semipredictivo),Derivado
+segmento,categoria,Segmento accionable de captacion/relacion,Derivado

@@ -1,0 +1,326 @@
+﻿id_registro,domicilio,ciudad_norm,direccion_geo,nivel_precision
+1,Perú 347,Coquimbo,"Perú 347, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+2,"Pasaje Cesar Vallejos #582, Sindempart",Coquimbo,"Pasaje Cesar Vallejos #582, Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+3,"Carrera #18, Parte Alta",Coquimbo,"Carrera #18, Parte Alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+4,Daniel Orengo Zepeda 1155,Coquimbo,"Daniel Orengo Zepeda 1155, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+5,Wenseslao vargas 897,Coquimbo,"Wenseslao vargas 897, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+6,"Amelia Barrios de Cavada 4581,Peñuelas",Coquimbo,"Amelia Barrios de Cavada 4581,Peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+7,Avda portugal 3042,Coquimbo,"Avda portugal 3042, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+8,Avda portugal 3042,Coquimbo,"Avda portugal 3042, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+9,Finlandia 89 las encinas,Coquimbo,"Finlandia 89 las encinas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+10,COBIJA 2365 CASA 1,Calama,"COBIJA 2365 CASA 1, Calama, Region de Coquimbo, Chile",direccion_exacta
+11,Pasaje SS Papa San Anacleto 1330 Villa Talinay,Coquimbo,"Pasaje SS Papa San Anacleto 1330 Villa Talinay, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+12,"Av. Los Toros 5526. DEPTO C301, Puente Alto",Santiago,"Av. Los Toros 5526. DEPTO C301, Puente Alto, Santiago, Region de Coquimbo, Chile",direccion_exacta
+13,"Chorrillos #74, Población Victoria",Coquimbo,"Chorrillos #74, Población Victoria, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+14,Ss papa san Anacleto 1330,Coquimbo,"Ss papa san Anacleto 1330, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+15,Zenteno 1521,Coquimbo,"Zenteno 1521, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+16,Luis Román Pizarro 211,Coquimbo,"Luis Román Pizarro 211, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+17,"Antonio Varas 1610, Providencia",Santiago,"Antonio Varas 1610, Providencia, Santiago, Region de Coquimbo, Chile",direccion_exacta
+18,Luis campos Maluenda 280,Coquimbo,"Luis campos Maluenda 280, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+19,Buen Pastor #475,Coquimbo,"Buen Pastor #475, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+20,"Felipe Wiegand Rodriguez #640, Punta Mira Sur",Coquimbo,"Felipe Wiegand Rodriguez #640, Punta Mira Sur, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+21,Avenida suecia 342,Coquimbo,"Avenida suecia 342, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+22,Psje santa adriana 3220 villa talinay,Coquimbo,"Psje santa adriana 3220 villa talinay, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+23,Pasaje punta arenas 22 guayacán,Coquimbo,"Pasaje punta arenas 22 guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+24,Pasaje punta arenas 22 Guayacán,Coquimbo,"Pasaje punta arenas 22 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+25,O'Higgins 310,Coquimbo,"O'Higgins 310, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+26,"Francisco Díaz Ramos # 2415, Punta Mira Norte",Coquimbo,"Francisco Díaz Ramos # 2415, Punta Mira Norte, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+27,Lourdes 048,Coquimbo,"Lourdes 048, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+28,Lourdes 048 Villa Dominante,Coquimbo,"Lourdes 048 Villa Dominante, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+29,"Pasaje, Antonio Valdés #1312,Villa el sauce",Coquimbo,"Pasaje, Antonio Valdés #1312,Villa el sauce, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+30,Francisco Diaz ramos 2471,Coquimbo,"Francisco Diaz ramos 2471, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+31,Pje juan esteban montero 089 tierras blancas,Coquimbo,"Pje juan esteban montero 089 tierras blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+32,Octavio Paz #1368,Coquimbo,"Octavio Paz #1368, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+33,"Avenida Juan Cisternas 4197, Edificio A1, Departamento 82",La Serena,"Avenida Juan Cisternas 4197, Edificio A1, Departamento 82, La Serena, Region de Coquimbo, Chile",direccion_exacta
+34,Las Violetas 572 Sindempart,Coquimbo,"Las Violetas 572 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+35,"Balmaceda 1330, parte alta",Coquimbo,"Balmaceda 1330, parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+36,FRANZ SCHUBERT 5148 MILAGRO II,La Serena,"FRANZ SCHUBERT 5148 MILAGRO II, La Serena, Region de Coquimbo, Chile",direccion_exacta
+37,"Psje. Ss. Papa Liberio #2735, La Cantera.",Coquimbo,"Psje. Ss. Papa Liberio #2735, La Cantera., Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+38,"Río Rapel #3919, El Rosario de Peñuelas",Coquimbo,"Río Rapel #3919, El Rosario de Peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+39,Maestranza #1013,Coquimbo,"Maestranza #1013, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+40,"Antuco 765, dpto 14. La Florida",Santiago,"Antuco 765, dpto 14. La Florida, Santiago, Region de Coquimbo, Chile",direccion_exacta
+41,Pasaje Verona 401,Coquimbo,"Pasaje Verona 401, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+42,J J Pérez 4179,Coquimbo,"J J Pérez 4179, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+43,Acapulco 3771,Coquimbo,"Acapulco 3771, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+44,3 Edye Pl Macgregor,Canberra,"3 Edye Pl Macgregor, Canberra, Region de Coquimbo, Chile",direccion_exacta
+45,Av. Presidente Ibáñez 181 casa n. 4 recinto fiscal Vialidad. Puerto Montt,Puerto Montt,"Av. Presidente Ibáñez 181 casa n. 4 recinto fiscal Vialidad. Puerto Montt, Puerto Montt, Region de Coquimbo, Chile",direccion_exacta
+46,Las Azucenas 504 Sindempart,Coquimbo,"Las Azucenas 504 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+47,Eleuterio ramirez 843,Coquimbo,"Eleuterio ramirez 843, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+48,Manuel cortes #1848 lomas San Ramón Coquimbo,Coquimbo,"Manuel cortes #1848 lomas San Ramón Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+49,Manuel cortes #1848 lomas San Ramón Coquimbo,Coquimbo,"Manuel cortes #1848 lomas San Ramón Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+50,Manuel cortes #1848 lomas de San Ramón Coquimbo,Coquimbo,"Manuel cortes #1848 lomas de San Ramón Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+51,Jorge Riveros 379 punta mira,Coquimbo,"Jorge Riveros 379 punta mira, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+52,"Jose caro #2921, Coquimbo",Coquimbo,"Jose caro #2921, Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+53,Caracoles 1527,Coquimbo,"Caracoles 1527, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+54,Guillermo Edwards 270,Coquimbo,"Guillermo Edwards 270, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+55,"Borgoño#1317,parte alta",Coquimbo,"Borgoño#1317,parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+56,Av. La Marina 15 dpto. 1401,Coquimbo,"Av. La Marina 15 dpto. 1401, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+57,Balmaceda #411 llano centro,Coquimbo,"Balmaceda #411 llano centro, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+58,"Las Azucenas 350, sindempart",Coquimbo,"Las Azucenas 350, sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+59,"Los Perales #532, Villa Dominante",Coquimbo,"Los Perales #532, Villa Dominante, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+60,Circunvalación Américo vespucio 79,Coquimbo,"Circunvalación Américo vespucio 79, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+61,Mar Mediterráneo #1352,Coquimbo,"Mar Mediterráneo #1352, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+62,"Alfonso Juan-Oliver Orrego #1326, Villa el sauce de miramar",Coquimbo,"Alfonso Juan-Oliver Orrego #1326, Villa el sauce de miramar, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+63,Eben ezer B 957,Coquimbo,"Eben ezer B 957, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+64,Su santidad Juan Pablo II 3353 loteo la cantera,Coquimbo,"Su santidad Juan Pablo II 3353 loteo la cantera, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+65,"Pasaje Los Rododendros #981, Sindempart",Coquimbo,"Pasaje Los Rododendros #981, Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+66,"Pasaje Las Rosas 1038, Parte Alta",Coquimbo,"Pasaje Las Rosas 1038, Parte Alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+67,"La marina #68, la herradura",Coquimbo,"La marina #68, la herradura, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+68,"Luis Alberto Aviles 1256, Cielos Del Valle",Coquimbo,"Luis Alberto Aviles 1256, Cielos Del Valle, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+69,Eugenio Marzal 496 Villa El Sauce,Coquimbo,"Eugenio Marzal 496 Villa El Sauce, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+70,Avda Salvador Allende 760 Sindempart,Coquimbo,"Avda Salvador Allende 760 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+71,Avda Salvador Allende 760 Sindempart,Coquimbo,"Avda Salvador Allende 760 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+72,Avda Salvador Allende 760 Sindempart,Coquimbo,"Avda Salvador Allende 760 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+73,Aconcagua 631 tierras blancas,Coquimbo,"Aconcagua 631 tierras blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+74,"Oceanía 661,Las Encinas, San Juan.",Coquimbo,"Oceanía 661,Las Encinas, San Juan., Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+75,Los clarines 1120,Coquimbo,"Los clarines 1120, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+76,"Luis Ayala # 1465, Parte alta",Coquimbo,"Luis Ayala # 1465, Parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+77,"Calle I.Carrera Pinto #732, el llano",Coquimbo,"Calle I.Carrera Pinto #732, el llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+78,"Héctor Gonzalez #71, Guayacan",Coquimbo,"Héctor Gonzalez #71, Guayacan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+79,Los cactus 1026 sindempart,Coquimbo,"Los cactus 1026 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+80,Punta arenas 22,Coquimbo,"Punta arenas 22, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+81,Avenida Nueva uno 3243 villa talinay,Coquimbo,"Avenida Nueva uno 3243 villa talinay, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+82,"Las Dalias #445 Sindempart , Coquimbo",Coquimbo,"Las Dalias #445 Sindempart , Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+83,Los Flamencos 701,Coquimbo,"Los Flamencos 701, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+84,Eugenio marzal #271 villa Portugal,Coquimbo,"Eugenio marzal #271 villa Portugal, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+85,Zoilo puerta 1016,Coquimbo,"Zoilo puerta 1016, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+86,"Av Los Clarines 1497, dpto G501, Sindempart",Coquimbo,"Av Los Clarines 1497, dpto G501, Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+87,Avda. Rinconada El Salto 925 Huechuraba,Santiago,"Avda. Rinconada El Salto 925 Huechuraba, Santiago, Region de Coquimbo, Chile",direccion_exacta
+88,Cesar nieme 999,Coquimbo,"Cesar nieme 999, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+89,Darío salas 1011 depto 1302,Coquimbo,"Darío salas 1011 depto 1302, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+90,Pj nuevo diez #3266 villa talinay,Coquimbo,"Pj nuevo diez #3266 villa talinay, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+91,Nueva York 225,Coquimbo,"Nueva York 225, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+92,O'Higgins 310 centro,Coquimbo,"O'Higgins 310 centro, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+93,"Los cipreses 55, cruz de caña, pan de azúcar",Coquimbo,"Los cipreses 55, cruz de caña, pan de azúcar, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+94,"Glorias Navales 1411, Punta Mira Norte",Coquimbo,"Glorias Navales 1411, Punta Mira Norte, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+95,Pasaje Salar San Martin 2416,Calama,"Pasaje Salar San Martin 2416, Calama, Region de Coquimbo, Chile",direccion_exacta
+96,Martinez de rozas 4037 Depto 1105 Quinta Normal Santiago,Santiago,"Martinez de rozas 4037 Depto 1105 Quinta Normal Santiago, Santiago, Region de Coquimbo, Chile",direccion_exacta
+97,"Proyectada 1, #41, la herradura",Coquimbo,"Proyectada 1, #41, la herradura, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+98,Javiera Carrera 1549,Coquimbo,"Javiera Carrera 1549, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+99,Agustín de la Sierra 517,Coquimbo,"Agustín de la Sierra 517, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+100,"Las mandragoras 730 , la herradura oriente",Coquimbo,"Las mandragoras 730 , la herradura oriente, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+101,"Las Ilusiones #656,Sindempart",Coquimbo,"Las Ilusiones #656,Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+102,Doctor Alfredo Pugh Cook 886,Coquimbo,"Doctor Alfredo Pugh Cook 886, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+103,Las Añañucas 537 Sindempart,Coquimbo,"Las Añañucas 537 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+104,Eleodoro olmos 3050,Coquimbo,"Eleodoro olmos 3050, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+105,"Glorias Navales 391, Punta Mira Norte",Coquimbo,"Glorias Navales 391, Punta Mira Norte, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+106,Tesoro del norte #154,Coquimbo,"Tesoro del norte #154, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+107,Buen Pastor #475 El Llano,Coquimbo,"Buen Pastor #475 El Llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+108,"O higgins, tierras blancas #949 coquimbo",Coquimbo,"O higgins, tierras blancas #949 coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+109,Maria Angélica 45 condominio Costa Herradura,Coquimbo,"Maria Angélica 45 condominio Costa Herradura, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+110,Pasaje Luis peñailillo #812,Coquimbo,"Pasaje Luis peñailillo #812, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+111,AVDA.CHINA 189 LAS ENCINAS,Coquimbo,"AVDA.CHINA 189 LAS ENCINAS, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+112,"Las espigas 1020 , sindempart",Coquimbo,"Las espigas 1020 , sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+113,Juan daza canales 1666,Coquimbo,"Juan daza canales 1666, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+114,Reserva nacional coyaique 1439 bosque San Carlos,Coquimbo,"Reserva nacional coyaique 1439 bosque San Carlos, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+115,"Pasaje luis michea 778, sindempart",Coquimbo,"Pasaje luis michea 778, sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+116,"Pasaje Los Rododendros #981, Sindempart",Coquimbo,"Pasaje Los Rododendros #981, Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+117,Pasaje victor lira errazuriz # 831 punta mira sur,Coquimbo,"Pasaje victor lira errazuriz # 831 punta mira sur, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+118,"Hector Gonzalez 71, Guayacan",Coquimbo,"Hector Gonzalez 71, Guayacan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+119,Raul Cantuarias 4115,Coquimbo,"Raul Cantuarias 4115, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+120,La oración #1565 peñuelas,Coquimbo,"La oración #1565 peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+121,"Pasaje los cactus #1026, sindempart",Coquimbo,"Pasaje los cactus #1026, sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+122,"Ohiggins #727, Parte alta",Coquimbo,"Ohiggins #727, Parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+123,"FD Roosevelt 973, Puerto Nuevo, Coquimbo",Coquimbo,"FD Roosevelt 973, Puerto Nuevo, Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+124,Los azahares #736,Coquimbo,"Los azahares #736, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+125,El Carmen pan de azucar,Coquimbo,"El Carmen pan de azucar, Coquimbo, Region de Coquimbo, Chile",direccion_parcial
+126,"Ruben jimenez #602, san juan",Coquimbo,"Ruben jimenez #602, san juan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+127,"Augusto 592, Recoleta",Santiago,"Augusto 592, Recoleta, Santiago, Region de Coquimbo, Chile",direccion_exacta
+128,Los copihues 80 sindempart,Coquimbo,"Los copihues 80 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+129,"Los Alerces #631, las tres villas, pan de azucar, coquimbo",Coquimbo,"Los Alerces #631, las tres villas, pan de azucar, coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+130,Pasaje 34 2026,Santiago,"Pasaje 34 2026, Santiago, Region de Coquimbo, Chile",direccion_exacta
+131,Rododendros 876 sindempart,Coquimbo,"Rododendros 876 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+132,Parque Nacional Conguillio 1333 Bosque San Carlos,Coquimbo,"Parque Nacional Conguillio 1333 Bosque San Carlos, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+133,"Mexico 126, San Juan",Coquimbo,"Mexico 126, San Juan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+134,José Hernandez 1165 Tierras Blancas,Coquimbo,"José Hernandez 1165 Tierras Blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+135,Eduardo Cornelio 867,Coquimbo,"Eduardo Cornelio 867, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+136,Calle Eduardo Sallorenzo Solis 941,Coquimbo,"Calle Eduardo Sallorenzo Solis 941, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+137,"San bernardo #152,porvenir",Coquimbo,"San bernardo #152,porvenir, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+138,Collipi 796,Coquimbo,"Collipi 796, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+139,Pasaje La Herradura 340 Sindempart,Coquimbo,"Pasaje La Herradura 340 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+140,pasaje monteverdi 2631 palomar,Copiapo,"pasaje monteverdi 2631 palomar, Copiapo, Region de Coquimbo, Chile",direccion_exacta
+141,Ricado bahamondez #501 llano,Coquimbo,"Ricado bahamondez #501 llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+142,"Luis López Salamanca #2987, las vertientes",Coquimbo,"Luis López Salamanca #2987, las vertientes, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+143,Ignacio carrera Pinto 1314 el llano,Coquimbo,"Ignacio carrera Pinto 1314 el llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+144,Angel castillo olivares #2527 punta mira norte,Coquimbo,"Angel castillo olivares #2527 punta mira norte, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+145,Psje Chaiten 0166 Pobl. Villa Alameda Rancagua,Rancagua,"Psje Chaiten 0166 Pobl. Villa Alameda Rancagua, Rancagua, Region de Coquimbo, Chile",direccion_exacta
+146,Pasaje María Luisa Bombal 1656,Coquimbo,"Pasaje María Luisa Bombal 1656, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+147,Julio Díaz Guerrero 325,Coquimbo,"Julio Díaz Guerrero 325, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+148,Wenceslao vargas 701,Coquimbo,"Wenceslao vargas 701, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+149,Francisco motta 320,Coquimbo,"Francisco motta 320, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+150,Las azucenas 245,Coquimbo,"Las azucenas 245, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+151,"Los azahares 736, sindempart",Coquimbo,"Los azahares 736, sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+152,"Los tulipanes 410, sindempart",Coquimbo,"Los tulipanes 410, sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+153,Montecarlo #717 peñuelas,Coquimbo,"Montecarlo #717 peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+154,Avenida los pescadores 5301 - dpto 1307,Coquimbo,"Avenida los pescadores 5301 - dpto 1307, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+155,"Abate molina 366, San Juan.",Coquimbo,"Abate molina 366, San Juan., Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+156,Pasaje Pali Aike 1227,Coquimbo,"Pasaje Pali Aike 1227, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+157,China #15 Las Encinas San Juan,Coquimbo,"China #15 Las Encinas San Juan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+158,Avenida Ossandon 60 Depto 96,Coquimbo,"Avenida Ossandon 60 Depto 96, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+159,Domingo perez 19 guayacan,Coquimbo,"Domingo perez 19 guayacan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+160,Boston 151 olivar bajo san juan,Coquimbo,"Boston 151 olivar bajo san juan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+161,Domingo perez 19 guayacan,Coquimbo,"Domingo perez 19 guayacan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+162,Domingo perez 19 guayacan,Coquimbo,"Domingo perez 19 guayacan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+163,Antonio varas 1726 parte alta,Coquimbo,"Antonio varas 1726 parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+164,Pedro lagos #1313,Coquimbo,"Pedro lagos #1313, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+165,"Nueva uno #3333, talinay",Coquimbo,"Nueva uno #3333, talinay, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+166,Los clarines 2471 punta mira sur,Coquimbo,"Los clarines 2471 punta mira sur, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+167,Los clarines 2471 punta mira sur,Coquimbo,"Los clarines 2471 punta mira sur, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+168,Almirante Simpsons 611,Coquimbo,"Almirante Simpsons 611, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+169,Amadeo freyzer 819,Coquimbo,"Amadeo freyzer 819, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+170,"Pasaje florencio pavez #2800, punta mira",Coquimbo,"Pasaje florencio pavez #2800, punta mira, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+171,Eusebio Lillo 6 Las Encinas,Coquimbo,"Eusebio Lillo 6 Las Encinas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+172,Avenida el sauce #202,Coquimbo,"Avenida el sauce #202, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+173,Juan ramon pomar 2860 punta mira norte coquimbo,Coquimbo,"Juan ramon pomar 2860 punta mira norte coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+174,Guacolda 701,Coquimbo,"Guacolda 701, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+175,Uruguay #826 El Llano,Coquimbo,"Uruguay #826 El Llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+176,"Calle Felipe aceituno #132, San Juan",Coquimbo,"Calle Felipe aceituno #132, San Juan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+177,Alonso de ercilla #319 parte alta,Coquimbo,"Alonso de ercilla #319 parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+178,"Ossandon 60, El Llano",Coquimbo,"Ossandon 60, El Llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+179,"Honduras 312, Olivar Bajo.",Coquimbo,"Honduras 312, Olivar Bajo., Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+180,"Pedro de Valdivia 35, El llano.",Coquimbo,"Pedro de Valdivia 35, El llano., Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+181,Los guayacanes st 24 b2 san Joaquín cruz de cañas,Coquimbo,"Los guayacanes st 24 b2 san Joaquín cruz de cañas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+182,Avenida los pescadores #19 peñuelas,Coquimbo,"Avenida los pescadores #19 peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+183,"Pasaje sauce #1240, Tierras Blancas",Coquimbo,"Pasaje sauce #1240, Tierras Blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+184,"Ohiggins 4 ,Parte Alta",Coquimbo,"Ohiggins 4 ,Parte Alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+185,"California #363, Olivar Bajo",Coquimbo,"California #363, Olivar Bajo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+186,"Las Pelargonias 913, Sindempart",Coquimbo,"Las Pelargonias 913, Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+187,Las orquídeas #1272 sindempart,Coquimbo,"Las orquídeas #1272 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+188,Los litres #1609 Las torres,Coquimbo,"Los litres #1609 Las torres, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+189,Los litres #1609 las torres,Coquimbo,"Los litres #1609 las torres, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+190,Las Pelargonias 913 Sindempart,Coquimbo,"Las Pelargonias 913 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+191,"Calle Narciso Herrera #3470, la cantera",Coquimbo,"Calle Narciso Herrera #3470, la cantera, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+192,Quebrada la gruta pasaje 5 #18 parte alta,Coquimbo,"Quebrada la gruta pasaje 5 #18 parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+193,Quebrada la gruta,Coquimbo,"Quebrada la gruta, Coquimbo, Region de Coquimbo, Chile",direccion_parcial
+194,"Martín Luther king #11,Llano",Coquimbo,"Martín Luther king #11,Llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+195,Pasaje sauce 1240 tierras blancas,Coquimbo,"Pasaje sauce 1240 tierras blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+196,Glorias navales 1051,Coquimbo,"Glorias navales 1051, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+197,Las Araucarias lote C20 Guayacan,Coquimbo,"Las Araucarias lote C20 Guayacan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+198,"Pasaje sauce #1240, Tierras Blancas",Coquimbo,"Pasaje sauce #1240, Tierras Blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+199,"Pasaje sauce #1240, Tierras Blancas",Coquimbo,"Pasaje sauce #1240, Tierras Blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+200,Julio allard 2895,Coquimbo,"Julio allard 2895, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+201,Los guayacanes st 24 b2 cruz de cañas pan de azúcar,Coquimbo,"Los guayacanes st 24 b2 cruz de cañas pan de azúcar, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+202,pasaje alonso valle 500,Coquimbo,"pasaje alonso valle 500, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+203,San Martin #1329 parte alta,Coquimbo,"San Martin #1329 parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+204,Ignacio Carrera Pinto 651,Coquimbo,"Ignacio Carrera Pinto 651, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+205,"Ignacio Carrera Pinto 651, El Llano",Coquimbo,"Ignacio Carrera Pinto 651, El Llano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+206,Los castaños 50,Coquimbo,"Los castaños 50, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+207,"Las azucenas #784,sindempart",Coquimbo,"Las azucenas #784,sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+208,Calle la frontera sitio R234 Cruz de cañas pan de azucar,Coquimbo,"Calle la frontera sitio R234 Cruz de cañas pan de azucar, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+209,Psj:rual jose vicente vergara #490punta mira sur,Coquimbo,"Psj:rual jose vicente vergara #490punta mira sur, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+210,Luis López Salamanca 2987,Coquimbo,"Luis López Salamanca 2987, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+211,"Camilo Henriquez #1203, Parte Alta",Coquimbo,"Camilo Henriquez #1203, Parte Alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+212,eduardo spencer block 7 depto 41,Coquimbo,"eduardo spencer block 7 depto 41, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+213,Buenaventura Martinez 1205,Coquimbo,"Buenaventura Martinez 1205, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+214,Amapolas 289,Coquimbo,"Amapolas 289, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+215,Amapolas 289 sindempart,Coquimbo,"Amapolas 289 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+216,Av los héroes 1720,Coquimbo,"Av los héroes 1720, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+217,Avda Ossandon 60,Coquimbo,"Avda Ossandon 60, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+218,Eduardo Spencer Block 7 depto 41,Coquimbo,"Eduardo Spencer Block 7 depto 41, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+219,Amapolas 289 sindempart,Coquimbo,"Amapolas 289 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+220,Calle de la escuela 341,Coquimbo,"Calle de la escuela 341, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+221,Haiti 477 olivar bajo,Coquimbo,"Haiti 477 olivar bajo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+222,Borgoño 511,Coquimbo,"Borgoño 511, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+223,Alessandri 1281 villa covico,Coquimbo,"Alessandri 1281 villa covico, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+224,Eugenio Marzal 385,Coquimbo,"Eugenio Marzal 385, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+225,Maipú 501 depto 1214 torre 1 baquedano,Coquimbo,"Maipú 501 depto 1214 torre 1 baquedano, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+226,"Av. Alberto Hurtado Cruchaga 1265, sector Valles del Sauce",Coquimbo,"Av. Alberto Hurtado Cruchaga 1265, sector Valles del Sauce, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+227,"Eben ezer b 08, villa el faro parte asalta",Coquimbo,"Eben ezer b 08, villa el faro parte asalta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+228,"Pasaje nuevo veintidos #3350 ,villa talinay , la cantera",Coquimbo,"Pasaje nuevo veintidos #3350 ,villa talinay , la cantera, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+229,Pasaje Nueva once 3291,Coquimbo,"Pasaje Nueva once 3291, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+230,Los maitenes 263 sindempart,Coquimbo,"Los maitenes 263 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+231,Recoleta 225,Coquimbo,"Recoleta 225, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+232,Villa dominante,Coquimbo,"Villa dominante, Coquimbo, Region de Coquimbo, Chile",direccion_parcial
+233,LAUTARO 1537 SECTOR PAMPILLA,Coquimbo,"LAUTARO 1537 SECTOR PAMPILLA, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+234,"Francisco de Aguirre Avenue 0665, La Serena, Coquimbo",La Serena,"Francisco de Aguirre Avenue 0665, La Serena, Coquimbo, La Serena, Region de Coquimbo, Chile",direccion_exacta
+235,Bellamar 51,Coquimbo,"Bellamar 51, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+236,Juan Antonio Río #914,Coquimbo,"Juan Antonio Río #914, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+237,adrian rivera alfaro 1084,Coquimbo,"adrian rivera alfaro 1084, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+238,"Los cisnes #948 terrazas de Peñuelas, Peñuelas.",Coquimbo,"Los cisnes #948 terrazas de Peñuelas, Peñuelas., Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+239,"Rio Imperial 1038, Peñuelas",Coquimbo,"Rio Imperial 1038, Peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+240,Los nardos #683 sindempart,Coquimbo,"Los nardos #683 sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+241,Las pelargonias 913,Coquimbo,"Las pelargonias 913, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+242,El rebenque #1197,San Bernardo,"El rebenque #1197, San Bernardo, Region de Coquimbo, Chile",direccion_exacta
+243,"Fresia 158, parte alta",Coquimbo,"Fresia 158, parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+244,"Varadero #841, Terrazas de Peñuelas",Coquimbo,"Varadero #841, Terrazas de Peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+245,Las palmeras 3,Coquimbo,"Las palmeras 3, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+246,Av alcalde Óscar Pereira Tapia 1150 la cantera,Coquimbo,"Av alcalde Óscar Pereira Tapia 1150 la cantera, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+247,Los nogales 3,Coquimbo,"Los nogales 3, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+248,Los nogales 3,Coquimbo,"Los nogales 3, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+249,"Avenida Alcalde Óscar Pereira Tapia #1150, Villa Talinay",Coquimbo,"Avenida Alcalde Óscar Pereira Tapia #1150, Villa Talinay, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+250,Pas palmeras3,Coquimbo,"Pas palmeras3, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+251,Eduardo Araya Castro 976 Nova Hacienda Coquimbo,Coquimbo,"Eduardo Araya Castro 976 Nova Hacienda Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+252,Rio chillan 3871 loteo porvenir,Coquimbo,"Rio chillan 3871 loteo porvenir, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+253,Las Orquideas #624,Coquimbo,"Las Orquideas #624, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+254,El tesoro del sur #72,Coquimbo,"El tesoro del sur #72, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+255,"Las Orquideas #624, Sindempart",Coquimbo,"Las Orquideas #624, Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+256,"Avenida el sauce #101, Sindempart",Coquimbo,"Avenida el sauce #101, Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+257,"Alfonso Juan-Oliver Orrego #1326, Villa El Sauce de Miramar",Coquimbo,"Alfonso Juan-Oliver Orrego #1326, Villa El Sauce de Miramar, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+258,Camilo Henríquez 1494,Coquimbo,"Camilo Henríquez 1494, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+259,calle tarapaca #690 tambillos coquimbo,Coquimbo,"calle tarapaca #690 tambillos coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+260,Pasaje El tesoro del Sur 42 Herradura Norte Coquimbo,Coquimbo,"Pasaje El tesoro del Sur 42 Herradura Norte Coquimbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+261,"Tesoro del sur 42, herradura norte",Coquimbo,"Tesoro del sur 42, herradura norte, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+262,Pasaje el tesoro del sur 42 herradura norte cqbo,Coquimbo,"Pasaje el tesoro del sur 42 herradura norte cqbo, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+263,"Buenaventura Martinez #1212,Villa Fedeco",Coquimbo,"Buenaventura Martinez #1212,Villa Fedeco, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+264,Winston chuchill blocl 10 depto 13,Coquimbo,"Winston chuchill blocl 10 depto 13, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+265,Psj s. S papa anastasio II 2354,Coquimbo,"Psj s. S papa anastasio II 2354, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+266,Honduras 312 San juan,Coquimbo,"Honduras 312 San juan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+267,Av las palmeras 2080,Coquimbo,"Av las palmeras 2080, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+268,El tesoro del sur 49,Coquimbo,"El tesoro del sur 49, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+269,Tesoro del sur 42 herradura norte,Coquimbo,"Tesoro del sur 42 herradura norte, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+270,"Las Azaleas 876, Sindempart.",Coquimbo,"Las Azaleas 876, Sindempart., Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+271,Luis peñailillo 1209,Coquimbo,"Luis peñailillo 1209, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+272,"Pedro Molina #3114, Punta mira norte",Coquimbo,"Pedro Molina #3114, Punta mira norte, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+273,Carlos Barrios #73 San Juan,Coquimbo,"Carlos Barrios #73 San Juan, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+274,Los Heliotropos 586,Coquimbo,"Los Heliotropos 586, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+275,Los Heliotropos 586,Coquimbo,"Los Heliotropos 586, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+276,Los Heliotropos 586,Coquimbo,"Los Heliotropos 586, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+277,Los Heliotropos 586,Coquimbo,"Los Heliotropos 586, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+278,Los Heliotropos 586,Coquimbo,"Los Heliotropos 586, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+279,Tomas Cantuarias 400,Coquimbo,"Tomas Cantuarias 400, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+280,Los cardenales,Coquimbo,"Los cardenales, Coquimbo, Region de Coquimbo, Chile",direccion_parcial
+281,"Andrés Julia N° 55, El Agrado de Peñuelas",Coquimbo,"Andrés Julia N° 55, El Agrado de Peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+282,freire 1378 parte alta,Coquimbo,"freire 1378 parte alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+283,"Todos los Santos 2160, Alto Peñuelas",Coquimbo,"Todos los Santos 2160, Alto Peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+284,Piloto Pardo # 18 Guayacán,Coquimbo,"Piloto Pardo # 18 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+285,Cotaje #1151 Guayacán,Coquimbo,"Cotaje #1151 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+286,Pasaje Estanque #1287 Guayacán,Coquimbo,"Pasaje Estanque #1287 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+287,Américo Vespusio #108 Sindempart,Coquimbo,"Américo Vespusio #108 Sindempart, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+288,Calle regimiento Arica 301 depto. 504 Peñuelas,Coquimbo,"Calle regimiento Arica 301 depto. 504 Peñuelas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+289,Punta Arenas #720,Coquimbo,"Punta Arenas #720, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+290,Punta Arenas # 720,Coquimbo,"Punta Arenas # 720, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+291,Punta Arenas #720,Coquimbo,"Punta Arenas #720, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+292,Errazuris #11 Guayacán,Coquimbo,"Errazuris #11 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+293,Los litres #1613 las torres,Coquimbo,"Los litres #1613 las torres, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+294,Perez #5 Guayacán,Coquimbo,"Perez #5 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+295,Errasuriz # 11,Coquimbo,"Errasuriz # 11, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+296,Errazuriz #2 Guayacán,Coquimbo,"Errazuriz #2 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+297,Cornelio Vau Speek #1181 Guayacán,Coquimbo,"Cornelio Vau Speek #1181 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+298,Avenida Las Flores # 757,Coquimbo,"Avenida Las Flores # 757, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+299,Calle Nueva uno # 3413,Coquimbo,"Calle Nueva uno # 3413, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+300,Santa Fe # 22 Parte Alta,Coquimbo,"Santa Fe # 22 Parte Alta, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+301,"los abedules, las torres ,cqbo",Coquimbo,"los abedules, las torres ,cqbo, Coquimbo, Region de Coquimbo, Chile",direccion_parcial
+302,Calle Nueva uno #3413,Coquimbo,"Calle Nueva uno #3413, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+303,Hector Gonzalez #726 Guayacán,Coquimbo,"Hector Gonzalez #726 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+304,Julio rivera 860 villa el mirador,Guanaqueros,"Julio rivera 860 villa el mirador, Guanaqueros, Region de Coquimbo, Chile",direccion_exacta
+305,camino antiguo ovalle 781 Tierras Blancas,Coquimbo,"camino antiguo ovalle 781 Tierras Blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+306,Pilota Pardo # 17 Guayacán,Coquimbo,"Pilota Pardo # 17 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+307,Carlos Darwin # 719 Guayacán,Coquimbo,"Carlos Darwin # 719 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+308,Los Rieles # 101 Guayacán,Coquimbo,"Los Rieles # 101 Guayacán, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+309,Parcela #41 sitio 3,Coquimbo,"Parcela #41 sitio 3, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+310,Pasaje Laguna Captero 1221 Bosque San Carlos,Coquimbo,"Pasaje Laguna Captero 1221 Bosque San Carlos, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+311,Tarapacá 831 Tierras Blancas,Coquimbo,"Tarapacá 831 Tierras Blancas, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+312,Alejandro BEucheff # 68,Coquimbo,"Alejandro BEucheff # 68, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+313,Heriberto Palacios # 2511,Coquimbo,"Heriberto Palacios # 2511, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+314,Lago Panela #1343 Bosque San Carlos,Coquimbo,"Lago Panela #1343 Bosque San Carlos, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+315,Heriberto Palacios # 2461,Coquimbo,"Heriberto Palacios # 2461, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+316,Heriberto Palacios #2461,Coquimbo,"Heriberto Palacios #2461, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+317,"Rio tulahuen,#957 km 465",Coquimbo,"Rio tulahuen,#957 km 465, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+318,Salar de Atacama # 441 Cielos del Valle,Coquimbo,"Salar de Atacama # 441 Cielos del Valle, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+319,Angelino # 55 Fundo Loreto,Coquimbo,"Angelino # 55 Fundo Loreto, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+320,Heriberto Palacios # 2461,Coquimbo,"Heriberto Palacios # 2461, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+321,San jose 106,Coquimbo,"San jose 106, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+322,Calle Zorobabel Valdivia 227,Coquimbo,"Calle Zorobabel Valdivia 227, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+323,"Avenida La Marina 15, dpto. 1401, Torre 1",Coquimbo,"Avenida La Marina 15, dpto. 1401, Torre 1, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+324,"Caleta la herradura, rinconada 3621",Coquimbo,"Caleta la herradura, rinconada 3621, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
+325,Mar Negro 274 Villa Portugal,Coquimbo,"Mar Negro 274 Villa Portugal, Coquimbo, Region de Coquimbo, Chile",direccion_exacta
